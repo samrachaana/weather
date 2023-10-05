@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast App</title>
+  <link rel="stylesheet" href="jump.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <main class="container">
+    <section class="left">
+      <!-- Search section -->
+      <section class="search-section">
+        <i class="bi bi-geo"></i>
+        <input type="search" id="search-box" placeholder="Enter your location" />
+        <button id="button" onclick="searchWeather()">Search</button>
+      </section>
+      <!-- End of Search section -->
+
+      <!-- City Weather -->
+      <section class="city-weather group">
+        <h2><span id="condition"></span></h2>
+        <figure>
+          <i class="bi" id="weather-icon"></i>
+        </figure>
+        <h1><span id="temperature"></span>°C</h1>
+        <p><span id="day"></span>, <span id="date"></span></p>
+        <h2>
+          <i class="bi bi-geo"></i>
+          <span id="city-name"></span>
+        </h2>
+      </section>
+      <!-- End of City Weather -->
+      <hr class="group" />
+      <!-- Weather info -->
+      <section class="weather-info group">
+        <!-- Pressure -->
+        <div class="info-item">
+          <i class="bi bi-barometer"></i>
+          <h1><span id="pressure"></span> Pa</h1>
+          <p>Pressure</p>
+        </div>
+        <!-- Wind speed -->
+        <div class="info-item">
+          <i class="bi bi-wind"></i>
+          <h1><span id="wind-speed"></span> m/s</h1>
+          <p>Wind Speed</p>
+        </div>
+        <!-- Humidity -->
+        <div class="info-item">
+          <i class="bi bi-droplet"></i>
+          <h1><span id="humidity"></span> %</h1>
+          <p>Humidity</p>
+        </div>
+      </section>
+      <!-- End of weather info -->
+
+      <!-- Error section -->
+      <section class="error hide">
+        <figure>
+          <i class="bi bi-exclamation-triangle"></i>
+        </figure>
+        <p>Invalid city. Please enter a valid city name.</p>
+      </section>
+      <!-- End of Error Section -->
+    </section>
+
+    <section class="right">
+      <h1></h1>
+      <div class="week-container"></div>
+    </section>
+  </main>
+  <script src="dump.js"></script>
+</body>
+</html>
